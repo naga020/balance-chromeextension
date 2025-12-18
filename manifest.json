@@ -2,19 +2,41 @@
   "manifest_version": 3,
   "name": "Balance: Mindful Browsing",
   "version": "1.0",
-  "description": "Track and reduce screen time with nudges and focus tools.",
-  "permissions": ["storage", "tabs", "activeTab", "scripting"],
+  "description": "A mindful browsing extension that blocks distracting sites and shows motivational quotes.",
+  
+  "permissions": [
+    "storage",
+    "tabs",
+    "scripting",
+    "activeTab"
+  ],
+
+  "host_permissions": [
+    "<all_urls>"
+  ],
+
   "background": {
     "service_worker": "background.js"
   },
+
   "action": {
     "default_popup": "popup.html",
     "default_icon": "icon.png"
   },
+
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
       "js": ["content.js"]
     }
+  ],
+
+  "web_accessible_resources": [
+    {
+      "resources": ["quotes.json"],
+      "matches": ["<all_urls>"]
+    }
   ]
 }
+
+
