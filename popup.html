@@ -1,14 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Balance</title>
+
+  <style>
+    body {
+      width: 260px;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      color: #222;
+    }
+
+    h1 {
+      font-size: 20px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    #pomodoroBtn {
+      width: 100%;
+      padding: 10px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-bottom: 15px;
+    }
+
+    #pomodoroBtn:hover {
+      background: #45a049;
+    }
+
+    h2 {
+      font-size: 16px;
+      margin-top: 10px;
+      margin-bottom: 8px;
+    }
+
+    #usageList div {
+      background: white;
+      padding: 6px 8px;
+      margin-bottom: 5px;
+      border-radius: 4px;
+      font-size: 14px;
+      border: 1px solid #ddd;
+    }
+  </style>
 </head>
+
 <body>
-  <h2>Balance</h2>
-  <button id="startPomodoro">Start Pomodoro</button>
-  <div id="timerDisplay"></div>
-  <h3>Today's Usage</h3>
-  <ul id="usageList"></ul>
+
+  <h1>Balance</h1>
+
+  <!-- Pomodoro Button -->
+  <button id="pomodoroBtn">Start Pomodoro</button>
+
+  <!-- Usage Section -->
+  <h2>Today's Usage</h2>
+  <div id="usageList"></div>
+
+  <!-- Script -->
   <script src="popup.js"></script>
+
 </body>
 </html>
